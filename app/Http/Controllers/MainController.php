@@ -22,4 +22,26 @@ class MainController extends Controller
         return view('comic.show', compact('comic'));
     }
 
+    public function create() {
+
+        return view('comic.create');
+    }
+
+    public function store(Request $request) {
+
+        $comics = $request -> all();
+
+        $comic = Comic :: create([
+            
+            "title" => $comics["title"],
+            "description" => $comics["description"],
+            "thumb" => $comics["thumb"],
+            "price" => $comics["price"],
+            "series" => $comics["series"],
+            "sale_date" => $comics["sale_date"],
+            "type" => $comics["type"]
+        ]);
+
+        return redirect() -> route("comic.show", $comic -> id);
+    }
 }
