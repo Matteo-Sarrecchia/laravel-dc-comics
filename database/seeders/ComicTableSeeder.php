@@ -230,7 +230,7 @@ class ComicTableSeeder extends Seeder
             ],
         ];
 
-        foreach ($$comics as $comic) {
+        foreach ($comics as $comic) {
             
             Comic :: create([
                 'title' => $comic['title'],

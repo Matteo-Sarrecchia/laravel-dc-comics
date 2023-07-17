@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\MainController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('comic.index');
-});
+
+Route :: get("/", [MainController :: class, "index"])
+    -> name('comic.index');
+
+Route :: get("/comic/{id}", [MainController :: class, "show"])
+    -> name('comic.show');
+
+Route :: get('/comic/create', [MainController :: class, 'create'])
+    -> name('comic.create');
