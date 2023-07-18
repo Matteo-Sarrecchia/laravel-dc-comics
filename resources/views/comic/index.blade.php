@@ -16,6 +16,13 @@
                     <a class="mx-3 btn btn-primary" href="{{ route('edit', $comic -> id) }}">
                         EDIT
                     </a>
+
+                    <form class="d-inline" method="POST" action="{{ route('destroy', $comic -> id) }}">
+                            @csrf
+                            @method('DELETE')
+    
+                            <input class="mx-3 btn btn-primary" type="submit" value="DELETE">
+                    </form>
                 </li>
             @endforeach
         </ul>

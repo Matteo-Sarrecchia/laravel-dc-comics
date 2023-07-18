@@ -7,7 +7,7 @@
             EDIT COMIC
         </h3> 
 
-        <form method="POST" action="{{ route('update' $comic -> id) }}">
+        <form method="POST" action="{{ route('update', $comic -> id) }}">
 
             @csrf
             @method('PUT')
