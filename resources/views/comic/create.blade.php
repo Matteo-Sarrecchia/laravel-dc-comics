@@ -7,7 +7,7 @@
             NEW COMIC
         </h3> 
 
-        <form method="POST" action="{{ route('pastas.store') }}">
+        <form method="POST" action="{{ route('comic.store') }}">
 
             @csrf
 
