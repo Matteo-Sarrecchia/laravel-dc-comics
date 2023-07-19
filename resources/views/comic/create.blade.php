@@ -38,7 +38,7 @@
 
             <label class="fw-bold" for="sale_date">Data di vendita</label>
             <br>
-            <input style="width: 50%;" class="mb-3" type="text" name="sale_date">
+            <input style="width: 50%;" class="mb-3" type="date" name="sale_date">
             <br>
 
             <label class="fw-bold" for="type">Genere</label>

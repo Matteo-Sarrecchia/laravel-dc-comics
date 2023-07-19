@@ -39,7 +39,7 @@
 
             <label class="fw-bold" for="sale_date">Data di vendita</label>
             <br>
-            <input type="text" name="sale_date" style="width: 50%;" class="mb-3" value="{{ $comic -> sale_date}}">
+            <input type="date" name="sale_date" style="width: 50%;" class="mb-3" value="{{ $comic -> sale_date}}">
             <br>
 
             <label class="fw-bold" for="type">Genere</label>
@@ -47,7 +47,7 @@
             <input type="text" name="type" style="width: 50%;" class="mb-3" value="{{ $comic -> type}}">
             <br>
 
-            <input class="my-3" type="submit" value="CREATE">
+            <input class="my-3" type="submit" value="EDIT">
         </form>
         
     </div>
